@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LOGIN DOLO</title>
+  <style>
+  body {
+        background-image: url('https://raw.githubusercontent.com/Ratmus19/Foto/main/IMG-20240418-WA0016.jpg');
+        background-size: cover; /* Untuk menyesuaikan ukuran gambar dengan layar */
+        background-repeat: no-repeat; /* Agar gambar tidak diulang */
+    }
+  </style>
+</head>
+<body>
+<h2>LOGIN</h2>
+<form id="loginForm">
+  <label for="nickname">NickName:</label><br>
+  <input type="text" id="nickname" name="nickname"><br><br>
+  <label for="password">Password:</label><br>
+  <input type="password" id="password" name="password"><br><br>
+  <input type="submit" value="Login">
+</form>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  
+  var password = document.getElementById("password").value;
+  var nickname = document.getElementById("nickname").value;
+  
+  // Cek password dan nickname
+  if (password === "nela" && nickname === "user") {
+    alert("Login berhasil!");
+    // Redirect ke website tertentu
+    window.location.href = "https://buatnela.netlify.app/";
+  } else {
+    alert("Login gagal. Silakan coba lagi.");
+  }
+});
+</script>
+</body>
+</html>
